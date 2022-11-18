@@ -5,6 +5,6 @@
 
 ## Run day
 * Open terminal
-* run `yarn start {number of te day\*}
+* run `yarn start {number of the day}`
 
 \* If left empty it defaults to the latest available solution
