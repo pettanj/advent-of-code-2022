@@ -18,13 +18,13 @@ async function part1()  {
   const input = [...await getInput(1)];
   
   const elves: number[] = [];
-  let group: string[] = [];
+  let group = 0;
   for(let i = 0; i < input.length; i++) {
     if (input[i] == "") {
-      elves.push(group.reduce((previous, current) => previous + parseInt(current, 10), 0));
-      group = [];
+      elves.push(group);
+      group = 0;
     } else {
-      group.push(input[i]);
+      group += parseInt(input[i]);
     }
   }
 
@@ -35,13 +35,13 @@ async function part2()  {
   const input = [...await getInput(1)];
   
   let elves: number[] = [];
-  let group: string[] = [];
+  let group = 0;
   for(let i = 0; i < input.length; i++) {
     if (input[i] == "") {
-      elves.push(group.reduce((previous, current) => previous + parseInt(current, 10), 0));
-      group = [];
+      elves.push(group);
+      group = 0;
     } else {
-      group.push(input[i]);
+      group += parseInt(input[i]);
     }
   }
   elves.sort((a, b) => b - a);
