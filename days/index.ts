@@ -5,6 +5,7 @@ import { day4 } from "./day4";
 import { day5 } from "./day5";
 import { day6 } from "./day6";
 import { day7 } from "./day7";
+import { day8 } from "./day8";
 
 export function solve(day: number) {
   switch (day) {
@@ -21,7 +22,9 @@ export function solve(day: number) {
       day5();
     case 6:
       day6();
-    default:
+    case 7:
       day7();
+    default:
+      day8();
   }
 }
